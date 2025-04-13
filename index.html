@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória - InuYasha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Junte os pares para começar sua jornada pela Era Feudal!</h1>
+
+    <section class="game-container">
+        <!-- <div class="card turn"></div>
+        <div class="card turn"></div>
+        <div class="card turn"></div>
+        <div class="card turn"></div>
+        <div class="card turn"></div>
+        <div class="card turn"></div>
+        <div class="card turn"></div>
+        <div class="card turn"></div>
+        <div class="card turn"></div>
+        <div class="card turn"></div>
+        <div class="card turn"></div>
+        <div class="card turn"></div> -->
+    </section>
+
+    <audio id="bg-music" loop>
+        <source src="audio/shippotheme.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="toggleMusic()" class="music-btn"></button>
+
+    <footer>
+        <p>Desenvolvido por Bárbara Chacon</p>
+    </footer>
+
+    <div class="win-container">
+        <div class="win-content">
+            <h2>PARABÉNS!</h2>
+            <p>Você encontrou todos os pares</p>
+            <button class="restart-btn">JOGAR NOVAMENTE</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+body {
+    background-image: url(img/backgroung.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'IM Fell English SC', serif;  
+    text-align: center;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #da3b13;
+    font-size: 3rem;
+    text-shadow: 2px 2px #792504;
+    margin: 20px 0 30px;
+    position: relative;
+    display: inline-block;
+}
+
+@keyframes bounce {
+    from {transform: translateY(0) rotate(-10deg);}
+    to {transform: translateY(-10px) rotate(10deg);}
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+    background: #f5e8af;
+    border-radius: 5px;
+    border: 6px solid #e72222;
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: #da3b13;
+    border-radius: 5px;
+    border: 4px solid #792504;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background-image: url('img/capa_da_peça.png');
+    background-size: cover;
+}
+
+.card:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 6px 0 #730404
+}
+
+.card.turn {
+    border-color: rgb(226, 7, 7);
+    box-shadow: 0 4px 0 #730404;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: none;
+}
+
+.card.turn::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: var(--card-image);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    z-index: -1;
+}
+
+.win-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/backgroung.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.win-content {
+    background: linear-gradient(135deg, #fff 20%, #fbaddb 35%, #c2579d 80%);
+    padding: 90px;
+    border-radius: 1000px;
+    text-align: center;
+    max-width: 500px;
+    width: 12%;
+}
+
+.win-content h2 {
+    color: #e72222;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.win-content p {
+    color: #e72222;
+    font-size: 20px;
+}
+
+.restart-btn {
+    background: #ffffff;
+    border: none;
+    border-radius: 50px;
+    padding: 8px;
+    color: #c2579d;
+    font-family: 'IM Fell English SC', serif;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.restart-btn:hover {
+    transform: translateY(-5px);
+}
+
+.restart-btn:active {
+    transform: translateY(2px);
+}
+
+footer {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.music-btn {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-image: url('img/somligado.png');
+    background-size: cover;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: 0.3s ease;
+}
+
+.music-btn:hover {
+    transform: scale(1.1);
+}
